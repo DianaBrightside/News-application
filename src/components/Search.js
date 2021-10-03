@@ -12,8 +12,6 @@ const Search = () => {
 
   function handleChange(event) {
     setCategory(event.target.value);
-
-    console.log(category);
   }
 
   async function fetchData() {
@@ -26,7 +24,6 @@ const Search = () => {
       const items = data.response.results;
       setFetchedData(items);
     } catch (error) {
-      console.log(error);
       setError(true);
     }
   }
@@ -49,9 +46,7 @@ const Search = () => {
     setLoading(true);
     fetchData();
     setLoading(false);
-    console.log("A name was submitted: " + category);
   }
-  console.log(fetchedData);
 
   return (
     <div className="search__preview">
@@ -86,12 +81,7 @@ const Search = () => {
           {fetchedData && category.length > 0 && (
             <div className="preview__news">
               {fetchedData.map((item, index) => (
-                <div
-                  //   onClick={() => handleClick(item.id)}
-                  key={index}
-                  className="news-item__preview"
-                >
-                  {/* {item.fields.headline} */}
+                <div key={index} className="news-item__preview">
                   <Link to={`/news/${item.id}`} onClick={() => handleClick()}>
                     {item.fields.headline}
                   </Link>

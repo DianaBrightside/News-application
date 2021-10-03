@@ -17,9 +17,6 @@ const App = () => {
           <Route exact path="/">
             <News pageSize={7} category="all" />
           </Route>
-          {/* <Route exact path="/:categoryNews">
-            <News pageSize={10} category=":category" />
-          </Route> */}
           <Route exact path="/sport">
             <News pageSize={10} category="sport" />
           </Route>

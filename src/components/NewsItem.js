@@ -9,9 +9,6 @@ const NewsItem = () => {
   const { id } = useParams();
   const userRequest = useFetchNewsItem(id);
 
-  console.log(userRequest.item);
-
-  console.log(id);
   return (
     <div>
       {userRequest.error && (
@@ -49,7 +46,7 @@ const NewsItem = () => {
                 <span className="news-item__author">
                   {userRequest.item.fields.byline}
                 </span>
-                {/* <span className="news-item__date">{userRequest.item.fields.firstPublicationDate} */}
+
                 <span className="news-item__date">
                   {moment(userRequest.item.fields.firstPublicationDate).format(
                     "MMMM Do YYYY"
