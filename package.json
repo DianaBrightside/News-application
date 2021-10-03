@@ -2,7 +2,7 @@
   "name": "techstack-task",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://DianaBrightside.github.io/news-application",
+  "homepage": "https://DianaBrightside.github.io/News-application",
   
   "dependencies": {
     "@material-ui/core": "^4.12.3",
