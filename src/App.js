@@ -4,13 +4,13 @@ import "./styles/style.css";
 
 import Header from "./components/Header";
 import News from "./components/News";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import Footer from "./components/Footer";
 import NewsItem from "./components/NewsItem";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="App">
         <Header />
         <Switch>
@@ -51,7 +51,7 @@ const App = () => {
         </Switch>
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
